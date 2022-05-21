@@ -47,7 +47,7 @@ class Round
   end
 
   def start
-    puts "Welcome! You're playing with 4 cards."
+    puts "Welcome! You're playing with #{deck.count} cards."
     -------------------------------------------------
     i= 0
     until i == deck.count
@@ -58,9 +58,9 @@ class Round
       puts take_turn(user_guess).feedback
     end
       puts "****** Game over! ******"
-      puts "You had #{number_correct} correct guesses out of 4 for a total score of #{percent_correct.to_i}%."
+      puts "You had #{number_correct} correct guesses out of #{deck.count} for a total score of #{percent_correct.to_i}%."
       puts "Reactive Nonmetals - #{percent_correct_by_category(:ReactiveNonmetals).to_i}% correct"
       puts "Noble Gases - #{percent_correct_by_category(:NobleGases).to_i}% correct"
       puts "Metalloids - #{percent_correct_by_category(:Metalloids).to_i}% correct"
     end
-end 
+end

@@ -29,7 +29,7 @@ RSpec.describe Round do
 
   it 'is the first card in the deck' do
 
-   expect(@round.current_card).to eq(@card_1)
+    expect(@round.current_card).to eq(@card_1)
   end
 
   it 'takes first turn' do
